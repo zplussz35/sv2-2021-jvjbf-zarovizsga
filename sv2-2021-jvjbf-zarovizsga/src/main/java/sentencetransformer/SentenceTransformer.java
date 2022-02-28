@@ -6,7 +6,7 @@ public class SentenceTransformer {
         Character firstChar = sentence.trim().charAt(0);
         Character lastChar = sentence.trim().charAt(sentence.trim().length() - 1);
 
-        if (!Character.isAlphabetic(firstChar) || !(Character.toUpperCase(firstChar) == firstChar)) {
+        if (!Character.isAlphabetic(firstChar) || Character.toUpperCase(firstChar) != firstChar) {
             throw new IllegalArgumentException("Must start with capital letter!");
         }
 
